@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_canvas/base/001_create.dart';
 import 'package:flutter_canvas/base/002_line_circle_square.dart';
+import 'package:flutter_canvas/base/003_create_widget.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         '001_create': (BuildContext context) => CreatePage(),
         '002_point_line_surface': (BuildContext context) =>
             LineCircleSquarePage(),
+        '003_create_widget': (BuildContext context) => CreateWidgetPage(),
       },
     );
   }
@@ -35,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   var baseList = [
     ['创建 CustomPaint', '001_create'],
     ['绘制线、圆、方', '002_point_line_surface'],
-    ['画线', '001_create'],
+    ['包装为 Widget', '003_create_widget'],
     ['画圆', '001_create'],
   ];
 
