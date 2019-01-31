@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_canvas/draw/001_draw_line.dart';
 import 'package:flutter_canvas/draw/002_draw_arc.dart';
+import 'package:flutter_canvas/draw/003_draw_circle.dart';
 
 class CanvasDrawAll extends StatelessWidget {
   @override
@@ -141,6 +142,41 @@ class _CanvasDrawAllPageState extends State<CanvasDrawAllPage> {
                 child: Text('/// 100x100px、黄色、不填充、90°、不使用中心闭环'),
               ),
               TitleTips(title: '圆'),
+              DrawCircle(
+                height: 100,
+                width: 100,
+                color: Colors.red,
+                radius: 50,
+                isFill: true,
+              ),
+              SizedBox(
+                height: 30,
+                child: Text('/// 半径为 50px、红色、填充'),
+              ),
+              DrawCircle(
+                height: 100,
+                width: 100,
+                color: Colors.yellow,
+                radius: 50,
+                isFill: false,
+                strokeWidth: 4,
+              ),
+              SizedBox(
+                height: 30,
+                child: Text('/// 半径为 50px、红色、不填充、画笔宽度 5px'),
+              ),
+              DrawCircle(
+                height: 200,
+                width: 200,
+                color: Colors.blue,
+                radius: 80,
+                isFill: false,
+                strokeWidth: 8,
+              ),
+              SizedBox(
+                height: 30,
+                child: Text('/// 半径为 80px、红色、不填充、画笔宽度 8px'),
+              ),
               TitleTips(title: '方'),
               TitleTips(title: '图'),
             ],
