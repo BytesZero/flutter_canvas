@@ -73,6 +73,7 @@ class _AddAnimationPageState extends State<AddAnimationPage>
   }
 }
 
+///进度条画家
 class AnimationPainter extends CustomPainter {
   double progress = 1.0;
 
@@ -80,7 +81,7 @@ class AnimationPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    ///创建画笔🖌
+    ///创建画笔 🖌
     var paint = Paint()
       ..isAntiAlias = true
       ..style = PaintingStyle.stroke

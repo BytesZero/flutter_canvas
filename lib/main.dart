@@ -3,6 +3,7 @@ import 'package:flutter_canvas/base/001_create.dart';
 import 'package:flutter_canvas/base/002_line_circle_square.dart';
 import 'package:flutter_canvas/base/003_create_widget.dart';
 import 'package:flutter_canvas/base/004_add_animation.dart';
+import 'package:flutter_canvas/base/005_canvas_draw_all.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
             LineCircleSquarePage(),
         '003_create_widget': (BuildContext context) => CreateWidgetPage(),
         '004_add_animation': (BuildContext context) => AddAnimationPage(),
+        '005_canvas_draw_all': (BuildContext context) => CanvasDrawAllPage(),
       },
     );
   }
@@ -41,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ['绘制线、圆、方', '002_point_line_surface'],
     ['包装为 Widget', '003_create_widget'],
     ['添加动画', '004_add_animation'],
+    ['Canvas 全部绘制接口', '005_canvas_draw_all'],
   ];
 
   @override
