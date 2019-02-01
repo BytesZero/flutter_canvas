@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_canvas/draw/000_draw_points.dart';
 import 'package:flutter_canvas/draw/001_draw_line.dart';
 import 'package:flutter_canvas/draw/002_draw_arc.dart';
 import 'package:flutter_canvas/draw/003_draw_circle.dart';
@@ -31,6 +34,103 @@ class _CanvasDrawAllPageState extends State<CanvasDrawAllPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              TitleTips(title: '点'),
+              DrawPoints(
+                width: 100,
+                height: 100,
+                color: Colors.red,
+                strokeWidth: 8,
+                strokeCap: StrokeCap.butt,
+                pointMode: PointMode.points,
+              ),
+              SizedBox(
+                height: 30,
+                child: Text('/// 红色、8px宽、没有笔头、绘制模式为points'),
+              ),
+              DrawPoints(
+                width: 100,
+                height: 100,
+                color: Colors.red,
+                strokeWidth: 8,
+                strokeCap: StrokeCap.round,
+                pointMode: PointMode.points,
+              ),
+              SizedBox(
+                height: 30,
+                child: Text('/// 红色、8px宽、圆形笔头、绘制模式为points'),
+              ),
+              DrawPoints(
+                width: 100,
+                height: 100,
+                color: Colors.yellow,
+                strokeWidth: 6,
+                strokeCap: StrokeCap.round,
+                pointMode: PointMode.lines,
+              ),
+              SizedBox(
+                height: 30,
+                child: Text('/// 黄色、6px宽、圆形笔头、绘制模式为 lines'),
+              ),
+              DrawPoints(
+                width: 100,
+                height: 100,
+                color: Colors.yellow,
+                strokeWidth: 6,
+                strokeCap: StrokeCap.butt,
+                pointMode: PointMode.lines,
+              ),
+              SizedBox(
+                height: 30,
+                child: Text('/// 黄色、6px宽、没有笔头、绘制模式为 lines'),
+              ),
+              DrawPoints(
+                width: 100,
+                height: 100,
+                color: Colors.yellow,
+                strokeWidth: 6,
+                strokeCap: StrokeCap.square,
+                pointMode: PointMode.lines,
+              ),
+              SizedBox(
+                height: 30,
+                child: Text('/// 黄色、6px宽、方形笔头、绘制模式为 lines'),
+              ),
+              DrawPoints(
+                width: 100,
+                height: 100,
+                color: Colors.blue,
+                strokeWidth: 6,
+                strokeCap: StrokeCap.round,
+                pointMode: PointMode.polygon,
+              ),
+              SizedBox(
+                height: 30,
+                child: Text('/// 蓝色、6px宽、圆形笔头、绘制模式为多边形 polygon'),
+              ),
+              DrawPoints(
+                width: 100,
+                height: 100,
+                color: Colors.blue,
+                strokeWidth: 6,
+                strokeCap: StrokeCap.square,
+                pointMode: PointMode.polygon,
+              ),
+              SizedBox(
+                height: 30,
+                child: Text('/// 蓝色、6px宽、方形笔头、绘制模式为多边形 polygon'),
+              ),
+              DrawPoints(
+                width: 100,
+                height: 100,
+                color: Colors.blue,
+                strokeWidth: 10,
+                strokeCap: StrokeCap.butt,
+                pointMode: PointMode.polygon,
+              ),
+              SizedBox(
+                height: 30,
+                child: Text('/// 蓝色、10px宽、没有笔头、绘制模式为多边形 polygon'),
+              ),
               TitleTips(title: '线'),
               DrawLineWidget(
                 color: Colors.red,
